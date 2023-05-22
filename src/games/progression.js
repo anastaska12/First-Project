@@ -1,5 +1,5 @@
 import runGame from "../index.js";
-import randomNumber from "../randomNumber.js";
+import getRandomNumber from "../utils.js";
 
 const gameRules = "What number is missing in the progression?";
 
@@ -13,10 +13,10 @@ const realisation = (step, length, start) => {
 };
 
 const userNumber = () => {
-  const start = randomNumber(1, 50);
-  const step = randomNumber(2, 5);
-  const length = randomNumber(5, 10);
-  const unknownIndex = randomNumber(0, length);
+  const start = getRandomNumber(1, 50);
+  const step = getRandomNumber(2, 5);
+  const length = getRandomNumber(5, 10);
+  const unknownIndex = getRandomNumber(0, length);
   const array = realisation(step, length, start);
 
   const answer = array[unknownIndex];

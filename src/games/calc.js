@@ -1,5 +1,5 @@
 import runGame from "../index.js";
-import randomNumber from "../randomNumber.js";
+import getRandomNumber from "../utils.js";
 
 const gameRules = "What is the result of the expression?";
 
@@ -15,11 +15,11 @@ const calculator = (num1, num2, randomSign) => {
 
 const userNumber = () => {
   const arr = ["+", "*", "-"];
-  const index = randomNumber(arr.length - 1);
+  const index = getRandomNumber(arr.length - 1);
   const randomSign = arr[index];
 
-  const num1 = randomNumber(1, 20);
-  const num2 = randomNumber(1, 10);
+  const num1 = getRandomNumber(1, 20);
+  const num2 = getRandomNumber(1, 10);
 
   const question = `${num1} ${randomSign} ${num2}`;
   const correctAnswer = calculator(num1, num2, randomSign);

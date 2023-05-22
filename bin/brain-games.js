@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import welcome from "../src/cli";
+import playWelcome from "../src/cli";
 
-welcome();
+playWelcome();
